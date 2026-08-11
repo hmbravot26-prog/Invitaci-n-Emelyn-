@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mis XV Años - Emelyn Leilany</title>
+<title>XV Años - Emelyn Leilany</title>
 
 <style>
 *{
@@ -14,194 +14,313 @@
 
 body{
   font-family:Georgia,serif;
-  background:linear-gradient(135deg,#b9e8ff,#eaf9ff,#9edcff);
+  background:linear-gradient(135deg,#d9f2ff,#f8fbff,#c7eaff);
+  color:#17324d;
   min-height:100vh;
-  color:#17415c;
+  overflow-x:hidden;
+}
+
+.screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.envelope{
+  width:min(420px,92vw);
   text-align:center;
-}
-
-.container{
-  max-width:600px;
-  margin:auto;
-  padding:30px 20px;
-}
-
-.card{
-  background:rgba(255,255,255,.82);
-  border:2px solid #d4af37;
+  background:rgba(255,255,255,.88);
   border-radius:30px;
   padding:40px 25px;
-  box-shadow:0 0 30px rgba(255,255,255,.9);
+  box-shadow:0 15px 45px rgba(30,90,130,.25);
+  border:2px solid rgba(255,255,255,.9);
+  animation:entrada 1.2s ease;
+}
+
+@keyframes entrada{
+  from{opacity:0;transform:translateY(35px) scale(.95)}
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
 
 .crown{
-  font-size:55px;
+  font-size:52px;
   margin-bottom:10px;
 }
 
+.envelope h1{
+  font-size:34px;
+  color:#579bc5;
+  margin-bottom:8px;
+}
+
+.envelope p{
+  font-size:17px;
+  line-height:1.6;
+  margin:8px 0;
+}
+
+.open{
+  margin-top:25px;
+  border:0;
+  padding:16px 30px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#65b8e8,#3788bd);
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 8px 20px rgba(45,120,170,.35);
+  cursor:pointer;
+}
+
+.open:active{
+  transform:scale(.96);
+}
+
+#invitation{
+  display:none;
+}
+
+.card{
+  width:min(650px,94vw);
+  margin:30px auto;
+  background:rgba(255,255,255,.94);
+  border-radius:32px;
+  padding:35px 24px;
+  text-align:center;
+  box-shadow:0 15px 50px rgba(25,90,130,.25);
+  border:3px solid rgba(120,190,225,.35);
+  animation:aparecer 1.3s ease;
+}
+
+@keyframes aparecer{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+
 .small{
-  letter-spacing:4px;
-  font-size:15px;
-  color:#8b6b12;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#619ec1;
+  font-size:13px;
 }
 
-h1{
-  font-size:42px;
-  color:#1678ad;
-  margin:15px 0 5px;
+.card h1{
+  font-size:48px;
+  color:#4a96c2;
+  margin:15px 0 4px;
 }
 
-.name{
-  font-size:28px;
-  color:#b28b18;
-  margin-bottom:25px;
+.card h2{
+  font-size:25px;
+  color:#6aabc9;
+  margin-bottom:22px;
 }
 
-.line{
-  width:80%;
-  height:2px;
-  background:#d4af37;
-  margin:20px auto;
+.divider{
+  width:100px;
+  height:3px;
+  background:#83c5e6;
+  margin:18px auto;
+  border-radius:10px;
 }
 
 .message{
   font-size:18px;
-  line-height:1.7;
-  margin:20px 0;
+  line-height:1.8;
+  margin:20px auto;
+  max-width:540px;
 }
 
-.date{
-  font-size:25px;
-  color:#1678ad;
-  margin:20px 0;
+.god{
+  background:linear-gradient(135deg,#e8f7ff,#f9fdff);
+  padding:20px;
+  border-radius:22px;
+  margin:25px 0;
+  font-style:italic;
+  line-height:1.7;
+  border:1px solid #c9e8f8;
 }
 
 .info{
-  margin:15px 0;
+  display:grid;
+  gap:14px;
+  margin:25px 0;
+}
+
+.box{
+  background:#edf9ff;
+  border-radius:20px;
+  padding:18px;
+}
+
+.box strong{
+  display:block;
+  color:#438bb4;
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.box span{
   font-size:17px;
 }
 
-.button{
-  display:inline-block;
-  margin:10px 5px;
-  padding:14px 22px;
-  border-radius:30px;
-  background:#1686bd;
-  color:white;
-  text-decoration:none;
-  font-size:16px;
-  box-shadow:0 5px 15px rgba(0,0,0,.15);
+.parents{
+  margin-top:28px;
+  line-height:1.7;
 }
 
-.button.gold{
-  background:#c5a027;
+.parents strong{
+  color:#438bb4;
 }
 
 .footer{
-  margin-top:25px;
-  font-size:15px;
-  color:#607d8b;
+  margin-top:30px;
+  font-size:17px;
+  color:#5686a2;
 }
 
-.star{
-  position:fixed;
-  color:white;
-  font-size:20px;
-  animation:fall 5s linear infinite;
-}
-
-@keyframes fall{
-  0%{
-    transform:translateY(-50px) rotate(0deg);
-    opacity:1;
-  }
-  100%{
-    transform:translateY(110vh) rotate(360deg);
-    opacity:0;
-  }
+.back{
+  margin-top:20px;
+  background:none;
+  border:1px solid #8fc8e5;
+  color:#4786aa;
+  padding:10px 18px;
+  border-radius:30px;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="star" style="left:10%;animation-delay:0s;">✦</div>
-<div class="star" style="left:30%;animation-delay:1s;">✧</div>
-<div class="star" style="left:50%;animation-delay:2s;">✦</div>
-<div class="star" style="left:70%;animation-delay:1.5s;">✧</div>
-<div class="star" style="left:90%;animation-delay:3s;">✦</div>
+<div class="screen" id="cover">
+  <div class="envelope">
+    <div class="crown">👑</div>
 
-<div class="container">
+    <div class="small">Una invitación especial</div>
 
-<div class="card">
+    <h1>XV Años</h1>
 
-<div class="crown">👑</div>
+    <p>
+      Hay momentos que se guardan para siempre...
+    </p>
 
-<div class="small">CON LA BENDICIÓN DE DIOS</div>
+    <p>
+      <strong>Emelyn Leilany</strong>
+    </p>
 
-<h1>Mis XV Años</h1>
+    <p>
+      te invita a descubrir una noche llena de
+      sueños, alegría y bendiciones.
+    </p>
 
-<div class="name">
-Emelyn Leilany<br>
-Bravo Vásquez
+    <button class="open" onclick="abrirInvitacion()">
+      ✨ Abrir invitación ✨
+    </button>
+  </div>
 </div>
 
-<div class="line"></div>
 
-<div class="message">
-Hay momentos en la vida que se quedan para siempre en el corazón.
-<br><br>
-Con mucha alegría y bajo la bendición de Dios,
-quiero compartir contigo uno de los días más especiales de mi vida.
-<br><br>
-✨ Mis XV Años ✨
+<div id="invitation">
+
+  <div class="card">
+
+    <div class="crown">👑</div>
+
+    <div class="small">Con la bendición de Dios</div>
+
+    <h1>Emelyn Leilany</h1>
+
+    <h2>Mis XV Años</h2>
+
+    <div class="divider"></div>
+
+    <p class="message">
+      Hay sueños que comienzan siendo pequeños
+      y con el paso del tiempo se convierten
+      en momentos inolvidables.
+      <br><br>
+      Hoy quiero compartir contigo uno de los
+      días más importantes de mi vida:
+      <br>
+      <strong>¡Mis XV Años!</strong>
+    </p>
+
+    <div class="god">
+      “Porque el Señor es quien guía nuestros pasos,
+      ilumina nuestro camino y llena nuestra vida
+      de bendiciones.”
+      <br><br>
+      <strong>Con Dios, todo sueño puede hacerse realidad.</strong>
+    </div>
+
+    <div class="info">
+
+      <div class="box">
+        <strong>📅 Fecha</strong>
+        <span>Sábado 17 de octubre de 2026</span>
+      </div>
+
+      <div class="box">
+        <strong>📍 Lugar</strong>
+        <span>503 McConnell Rd<br>Calhoun, GA 30701</span>
+      </div>
+
+      <div class="box">
+        <strong>✨ Una noche para recordar</strong>
+        <span>
+          Será un honor contar con tu presencia
+          para celebrar juntos este momento tan especial.
+        </span>
+      </div>
+
+    </div>
+
+    <div class="parents">
+      <p>
+        Con mucho cariño,
+      </p>
+
+      <p>
+        <strong>Mis padres</strong><br>
+        Heber Bravo<br>
+        Karina Vasquez
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="footer">
+      Gracias por ser parte de este momento
+      tan especial de mi vida. 💙
+      <br><br>
+      <strong>¡Te esperamos!</strong>
+    </p>
+
+    <button class="back" onclick="cerrarInvitacion()">
+      Volver al inicio
+    </button>
+
+  </div>
+
 </div>
 
-<div class="date">
-17 de Octubre de 2026
-</div>
 
-<div class="info">
-<strong>Mis Padres</strong><br>
-Heber Bravo & Karina Vásquez
-</div>
+<script>
+function abrirInvitacion(){
+  document.getElementById("cover").style.display="none";
+  document.getElementById("invitation").style.display="block";
+  window.scrollTo(0,0);
+}
 
-<div class="line"></div>
-
-<div class="info">
-📍 <strong>Recepción</strong><br><br>
-503 McConnell Rd<br>
-Calhoun, GA 30701
-</div>
-
-<a class="button gold"
-href="https://www.google.com/maps/search/?api=1&query=503+McConnell+Rd+Calhoun+GA+30701"
-target="_blank">
-📍 Ver ubicación
-</a>
-
-<a class="button"
-href="https://wa.me/?text=Confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Emelyn%20Leilany%20Bravo%20V%C3%A1squez"
-target="_blank">
-💌 Confirmar asistencia
-</a>
-
-<div class="line"></div>
-
-<div class="message">
-“Este es el día que hizo el Señor;
-nos gozaremos y alegraremos en él.”
-<br><br>
-<strong>Salmo 118:24</strong>
-</div>
-
-<div class="footer">
-Con cariño, Emelyn Leilany 💙✨
-</div>
-
-</div>
-</div>
+function cerrarInvitacion(){
+  document.getElementById("invitation").style.display="none";
+  document.getElementById("cover").style.display="flex";
+  window.scrollTo(0,0);
+}
+</script>
 
 </body>
 </html>
-<!-- GitHub Pages refresh -->
