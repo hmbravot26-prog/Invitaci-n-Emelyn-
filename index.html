@@ -71,11 +71,20 @@ body{
   font-size:18px;
   font-weight:bold;
   box-shadow:0 8px 20px rgba(45,120,170,.35);
-  cursor:pointer;
+  cursor:pointer;animation:brilloBoton 1.8s ease-in-out infinite;
 }
 
 .open:active{
   transform:scale(.96);
+}@keyframes brilloBoton{
+  0%,100%{
+    box-shadow:0 8px 20px rgba(45,120,170,.35);
+    transform:scale(1);
+  }
+  50%{
+    box-shadow:0 0 18px rgba(255,215,120,.95),0 0 35px rgba(255,215,120,.55);
+    transform:scale(1.04);
+  }
 }
 
 #invitation{
